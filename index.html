@@ -2,24 +2,26 @@
 <html lang="ko">
 <head>
     <link rel="stylesheet" href="index.css"/>
-    <META charset="UTF-8"/>
-    <title>Title</title>
+    <META charset="UTF-8">
+    <META content="width=device-width, initial-scale=1.0" name="viewport">
+    <META content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>anpan</title>
 </head>
 <body>
-<h1 id="title" class="btn">hello start javascript</h1>
+<h1 class="btn" id="title">anpan todo List관리</h1>
 <div class="js-clock">
     <h1 class="js-title"></h1>
 </div>
 <form class="js-form form">
-    <input type="text" placeholder="name?"/>
+    <input class="name__input" placeholder="당신의 이름은?" type="text"/>
 </form>
-<h4 class="js-greetings greetings"></h4>
+<h2 class="js-greetings greetings"></h2>
 <form class="js-toDoForm">
-    <input placeholder="write to do" type="text">
+    <input class="toDo__input" placeholder="오늘할일은?" type="text">
 </form>
 <ul class="js-toDoList">
 </ul>
-<span class="js-weather"></span>
+<span class="js-weather weather"></span>
 <script src="clock.js"></script>
 <script src="greeting.js"></script>
 <script src="todo.js"></script>
