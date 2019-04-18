@@ -31,7 +31,6 @@ function loadName() {
     if (currentUser === null) {
         askForName();
     } else {
-        console.log(currentUser);
         faintingGreeting(currentUser);
     }
 
