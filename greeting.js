@@ -7,7 +7,7 @@ const SHOWING_CN = "showing";
 function faintingGreeting(text) {
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
-    greeting.innerText = `hello ${text}`;
+    greeting.innerText = `좋은 하루 보내세요~! ${text} 님`;
 }
 
 function handleSubmit(event) {

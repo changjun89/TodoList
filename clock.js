@@ -14,7 +14,7 @@ function getTime() {
     const months = formatTime(date.getMonth());
     const years = formatTime(date.getFullYear());
 
-    clockTitle.innerText = `${years}/${months}/${days}  ${hours}:${minutes}:${seconds}`
+    clockTitle.innerText = `${months}/${days}  ${hours}:${minutes}:${seconds}`
 }
 
 function init() {

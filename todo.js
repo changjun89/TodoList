@@ -16,10 +16,6 @@ function loadToDos() {
     }
 }
 
-function filterFn(toDo) {
-    return toDo.id === 1;
-}
-
 function deleteToDo(event) {
     const btn = event.target;
     const li = btn.parentNode;
@@ -63,7 +59,6 @@ function handleSubmit(event) {
     const currentValue = toDoInput.value;
     paintTodo(currentValue);
     toDoInput.value = "";
-    //   localStorage.setItem(TODOS_LS, currentValue);
 }
 
 function init() {
