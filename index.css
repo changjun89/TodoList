@@ -47,7 +47,7 @@ h6 {
 .form,
 .greetings {
     display: none;
-    font-size: 50px;
+    font-size: 2rem;
 }
 
 .showing {
@@ -124,5 +124,5 @@ li {
 }
 
 .clock {
-    font-size: 75px;
+    font-size: 2rem;
 }
