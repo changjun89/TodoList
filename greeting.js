@@ -1,8 +1,19 @@
+function greetingApi(storageKey) {
+    this.get = function () {
+        return localStorage.getItem(USER_LS);
+    }
+    this.set = function (name) {
+        localStorage.setItem(USER_LS, name);
+    }
+}
+
 const form = document.querySelector(".js-form");
 const input = form.querySelector("input");
 const greeting = document.querySelector(".js-greetings");
 const USER_LS = "name";
 const SHOWING_CN = "showing";
+
+const api = new greetingApi(USER_LS);
 
 function faintingGreeting(text) {
     form.classList.remove(SHOWING_CN);
@@ -18,7 +29,7 @@ function handleSubmit(event) {
 }
 
 function saveName(name) {
-    localStorage.setItem(USER_LS, name);
+    api.set(name);
 }
 
 function askForName() {
@@ -27,7 +38,7 @@ function askForName() {
 }
 
 function loadName() {
-    const currentUser = localStorage.getItem(USER_LS);
+    const currentUser = api.get();
     if (currentUser === null) {
         askForName();
     } else {
