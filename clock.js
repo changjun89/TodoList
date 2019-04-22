@@ -14,7 +14,11 @@ function getTime() {
     const months = formatTime(date.getMonth());
     const years = formatTime(date.getFullYear());
 
-    clockTitle.innerText = `${months}/${days}  ${hours}:${minutes}:${seconds}`
+    paintTime(`${months}/${days}  ${hours}:${minutes}:${seconds}`);
+}
+
+function paintTime(text) {
+    clockTitle.innerText = text;
 }
 
 function init() {

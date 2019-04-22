@@ -9,9 +9,12 @@ function getWeather(lat, lon) {
     }).then(function (json) {
         const temperature = json.main.temp;
         const place = json.name;
-
-        weather.innerText = `${place} 의 온도는 ${temperature}`;
+        paintWeather(`${place} 의 온도는 ${temperature}`);
     })
+}
+
+function paintWeather(text) {
+    weather.innerText = text;
 }
 
 function saveCoords(coordsObject) {

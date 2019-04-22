@@ -11,7 +11,7 @@ function loadToDos() {
     if (loadToDos !== null) {
         const parseToDos = JSON.parse(loadToDos);
         parseToDos.forEach(function (todo) {
-            paintTodo(todo.test);
+            paintTodo(todo.text);
         })
     }
 }
@@ -32,25 +32,36 @@ function saveToDos() {
 
 }
 
-function paintTodo(text) {
-    const li = document.createElement("li");
+function delBtnMake() {
     const delBtn = document.createElement("button");
-    const newId = toDos.length + 1;
     delBtn.innerHTML = "❌";
     delBtn.className = "toDo__button";
     delBtn.addEventListener("click", deleteToDo);
+    return delBtn;
+}
+
+function getToDoId() {
+    return toDos.length + 1;
+}
+function pushToDo(toDoObj) {
+    toDos.push(toDoObj);
+}
+function paintTodo(text) {
+    const li = document.createElement("li");
+    const delBtn = delBtnMake();
+    const toDoId = getToDoId();
     const span = document.createElement("span");
     span.innerText = text;
     li.appendChild(delBtn);
     li.appendChild(span);
-    li.id = newId;
+    li.id = toDoId;
     toDoList.appendChild(li);
 
     const toDoObj = {
-        test: text,
-        id: newId
+        text: text,
+        id: toDoId
     }
-    toDos.push(toDoObj);
+    pushToDo(toDoObj);
     saveToDos();
 }
 
